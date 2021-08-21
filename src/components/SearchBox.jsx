@@ -1,9 +1,7 @@
 import React from 'react'
-import PropTypes from "prop-types"
 
 function SearchBox(props) {
   const recipeRef = React.createRef()
-
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -16,7 +14,7 @@ function SearchBox(props) {
       className="w-full max-w-sm py-4"
       onSubmit={handleSubmit}
     >
-      <div className="flex items-center border-b border-b-2 border-teal-500 py-2">
+      <div className="flex items-center border-b-2 border-teal-500 py-2">
         <input
           className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none"
           ref={recipeRef}

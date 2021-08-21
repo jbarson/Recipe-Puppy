@@ -14,7 +14,8 @@ class App extends React.Component {
     };
   }
   fetchItems = (recipe, page) => { 
-    fetch(`http://www.recipepuppy.com/api/?q=${recipe}&p=${page}`)
+    const url = '/proxy/'+`http://www.recipepuppy.com/api/?q=${recipe}&p=${page}`
+    fetch(url)
       .then(res => res.json())
       .then(
         (result) => {
